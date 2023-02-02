@@ -14,7 +14,10 @@ class InvoiceController extends Controller
      */
     public function index()
     {
-        //
+        $invoices = Invoice::paginate(10);
+        return response()->json([
+            'data' => $invoices,
+        ]);
     }
 
     /**

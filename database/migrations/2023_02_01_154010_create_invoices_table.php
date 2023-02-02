@@ -20,6 +20,7 @@ return new class extends Migration
             $table->integer('amount');
             $table->dateTime('billed_dated');
             $table->dateTime('paid_dated')->nullable();
+            $table->string('status');
 
         });
     }
